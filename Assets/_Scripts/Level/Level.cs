@@ -13,9 +13,9 @@ public class Level : MonoBehaviour
 
     public void OnInit()
     {
-        for (int i = 0; i < stages.Length; i++)
+        foreach (var stage in stages)
         {
-            stages[i].OnInit();
+            stage.OnInit();
         }
     }
 }

@@ -60,9 +60,12 @@ public class Character : ColorObject
 
     public void ClearBrick()
     {
-        for (int i = 0; i < playerBricks.Count; i++)
+        for (int i = playerBricks.Count - 1; i >= 0; i--)
         {
-            Destroy(playerBricks[i]);
+            if (playerBricks[i] != null)
+            {
+                Destroy(playerBricks[i].gameObject);
+            }
         }
 
         playerBricks.Clear();
